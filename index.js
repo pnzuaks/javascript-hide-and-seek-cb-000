@@ -8,7 +8,10 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-
+  var lis=document.getElementById("app").querySelectorAll("ul.ranked-list li");
+  for(let i=0;i<lis.length;i++) {
+    lis[i].innerHTML=parseInt(lis[i].innerHTML)+n;
+  }
 }
 
 function deepestChild() {
@@ -17,5 +20,5 @@ function deepestChild() {
     for (let i = 0; i < divs.length-1; i++) {
       test = divs[i].querySelector('div')
     }
-  return test 
+  return test
 }
